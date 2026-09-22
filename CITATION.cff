@@ -5,7 +5,7 @@ type: software
 authors:
   - family-names: Abduramanov
     given-names: Ibraim
-version: 1.0.0
+version: 0.1.0
 date-released: 2026-09-22
 repository-code: "https://github.com/useribraim/glucose-embeddings-evaluation"
 abstract: "A completed retrospective single-person comparison of glucose-summary Ridge and the same summaries plus frozen community encoder features. Public CPU inference and contract tests use synthetic data; the personal results are provided as aggregates."
