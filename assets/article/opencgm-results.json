@@ -1,0 +1,488 @@
+{
+  "status": "measured retrospective single-person matched comparison",
+  "model": "OpenCGM-StateEvent, seed 17 epoch 40; community reconstruction, not Google's GlucoFM",
+  "encoder_sha256": "b1349deffd15ab62a5a98d7c7c4a7e143bcf1dee7ad745b1e05533ff54f34768",
+  "hf_revision": "6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3",
+  "source_revision": "bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf",
+  "protocol_sha256": "3cc2fd06755d644bdc1a44efdb83d17c62922472b4a06ad8183569a2f69853bb",
+  "code_sha256": {
+    "archive_inventory.py": "35380f84b14279969a78e06efd55c5dea056c2ec94e76e8fba5edd8e994f1522",
+    "clock_audit.py": "e41145eb8352b830daf3a1afcbce3cfea0c9996def1fb417ca2acdb1135e8ecf",
+    "prepare_opencgm.py": "23370d504e62b102ddfbb7f28382dbe696cafde9047240f7915ffb4553d011da",
+    "context_comparison.py": "f6eed7608d62490373e6edd181c6254756146ebce175aa4d943d25b618010b8d",
+    "opencgm_comparison.py": "b324750df0f2a6ba97ac096f26cc7abe2449da8d651c56498778d512b80421a6"
+  },
+  "build_manifest_sha256": "85580b41e8e9f14075e6d1a8755cb82df470ec8e498f6e3662d18f31c4ab026e",
+  "environment": {
+    "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "platform": "macOS-15.7.9-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "onnx": "1.23.0",
+      "onnxruntime": "1.30.0"
+    }
+  },
+  "summary_features": [
+    "last_g",
+    "hist_mean",
+    "hist_std",
+    "hist_min",
+    "hist_max",
+    "slope_30m",
+    "tod_sin",
+    "tod_cos"
+  ],
+  "embedding_dimensions": 128,
+  "horizons_min": [
+    30,
+    60,
+    90,
+    120
+  ],
+  "alpha_grid": [
+    0.001,
+    0.0031622776601683794,
+    0.01,
+    0.03162277660168379,
+    0.1,
+    0.31622776601683794,
+    1.0,
+    3.1622776601683795,
+    10.0,
+    31.622776601683793,
+    100.0,
+    316.22776601683796,
+    1000.0,
+    3162.2776601683795,
+    10000.0,
+    31622.776601683792,
+    100000.0,
+    316227.7660168379,
+    1000000.0
+  ],
+  "selected_alphas": {
+    "summary": [
+      0.001,
+      0.001,
+      0.001,
+      0.001
+    ],
+    "augmented": [
+      31.622776601683793,
+      100.0,
+      100.0,
+      100.0
+    ]
+  },
+  "selected_validation_mae": {
+    "summary": [
+      23.75652293508186,
+      37.49056222347698,
+      44.35244915494723,
+      47.31405554829329
+    ],
+    "augmented": [
+      23.946230323880325,
+      37.40275135753161,
+      44.29109528618619,
+      47.293526354249416
+    ]
+  },
+  "counts": {
+    "candidate_issue_times": 14754,
+    "archive_boundary": 14,
+    "missing_target_bins": 255,
+    "history_gap_over_60min": 2939,
+    "history_coverage_or_last_bin": 103,
+    "clock_support_overlap": 399,
+    "eligible_windows": 11044
+  },
+  "split_counts": {
+    "development_train": 5334,
+    "validation": 3357,
+    "final_train": 8704,
+    "exploratory": 1662,
+    "later": 654
+  },
+  "primary_outcome": "later-test 60min augmented-minus-summary MAE; negative favors embeddings",
+  "units": "mg/dL",
+  "bootstrap": {
+    "unit": "ISO week",
+    "resamples": 2000,
+    "seed": 42,
+    "paired": true,
+    "estimand": "event-weighted MAE, conditional on fitted models"
+  },
+  "checks": [
+    "frozen protocol/code/input/model/window hashes match",
+    "full-support split purging",
+    "same test identity array for all arms/horizons",
+    "finite matched predictions",
+    "training-only standardization and fitting; validation-only alpha selection"
+  ],
+  "exploratory": {
+    "events": 1662,
+    "weeks": 27,
+    "metrics": {
+      "30": {
+        "persistence": {
+          "mae": 26.513423614410144,
+          "ci95": [
+            25.16976126111753,
+            27.85635263844877
+          ]
+        },
+        "summary": {
+          "mae": 23.063903991669942,
+          "ci95": [
+            21.729032880630005,
+            24.44265644068362
+          ]
+        },
+        "augmented": {
+          "mae": 23.045043546237387,
+          "ci95": [
+            21.665048995192784,
+            24.413020721895524
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": -0.018860445432555783,
+          "ci95": [
+            -0.26139027282546856,
+            0.21260538771476298
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -3.4495196227402025,
+          "ci95": [
+            -4.23208693322959,
+            -2.639373500049213
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -3.4683800681727583,
+          "ci95": [
+            -4.2568239855899614,
+            -2.6585043196674603
+          ]
+        }
+      },
+      "60": {
+        "persistence": {
+          "mae": 42.1422063090741,
+          "ci95": [
+            40.19245532176779,
+            44.04523802285285
+          ]
+        },
+        "summary": {
+          "mae": 37.16508831766402,
+          "ci95": [
+            35.217935840880564,
+            39.17238382043849
+          ]
+        },
+        "augmented": {
+          "mae": 37.33086675149118,
+          "ci95": [
+            35.51886734520275,
+            39.27483334672166
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": 0.1657784338271585,
+          "ci95": [
+            -0.19518021137269848,
+            0.5115196316310375
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -4.977117991410076,
+          "ci95": [
+            -6.383552741683118,
+            -3.5437101781515805
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -4.811339557582918,
+          "ci95": [
+            -6.198846092799146,
+            -3.431002615349315
+          ]
+        }
+      },
+      "90": {
+        "persistence": {
+          "mae": 52.11509605435258,
+          "ci95": [
+            49.75996207819659,
+            54.70844998174299
+          ]
+        },
+        "summary": {
+          "mae": 44.87296506301514,
+          "ci95": [
+            42.87226176669817,
+            47.29386859834188
+          ]
+        },
+        "augmented": {
+          "mae": 45.022434282637796,
+          "ci95": [
+            42.98904283266919,
+            47.49156379656265
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": 0.1494692196226582,
+          "ci95": [
+            -0.3565517365768042,
+            0.6418475523711582
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -7.2421309913374445,
+          "ci95": [
+            -9.231784223538924,
+            -5.462944083743934
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -7.092661771714785,
+          "ci95": [
+            -9.127031135042525,
+            -5.293435786070929
+          ]
+        }
+      },
+      "120": {
+        "persistence": {
+          "mae": 57.21266365739843,
+          "ci95": [
+            54.48338722180016,
+            60.321664532465626
+          ]
+        },
+        "summary": {
+          "mae": 47.574390786062594,
+          "ci95": [
+            45.22565662499602,
+            50.490651243591664
+          ]
+        },
+        "augmented": {
+          "mae": 47.79333534973939,
+          "ci95": [
+            45.25504158278358,
+            50.90287848263473
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": 0.21894456367680143,
+          "ci95": [
+            -0.3573728368778643,
+            0.8146210458531987
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -9.638272871335841,
+          "ci95": [
+            -11.832916238472766,
+            -7.515787715288278
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -9.419328307659038,
+          "ci95": [
+            -11.844306167149234,
+            -7.13034330463107
+          ]
+        }
+      }
+    }
+  },
+  "later": {
+    "events": 654,
+    "weeks": 12,
+    "metrics": {
+      "30": {
+        "persistence": {
+          "mae": 26.760057116867205,
+          "ci95": [
+            25.551150979551938,
+            28.011641093592665
+          ]
+        },
+        "summary": {
+          "mae": 22.49736660740913,
+          "ci95": [
+            20.75314701428719,
+            24.1296796500859
+          ]
+        },
+        "augmented": {
+          "mae": 22.581620950144888,
+          "ci95": [
+            20.70274828479578,
+            24.302715095208594
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": 0.08425434273575468,
+          "ci95": [
+            -0.3394441319914841,
+            0.5075008792904797
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -4.262690509458074,
+          "ci95": [
+            -5.674299496584379,
+            -2.8452441705865485
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -4.178436166722319,
+          "ci95": [
+            -5.667414454033055,
+            -2.679416571318652
+          ]
+        }
+      },
+      "60": {
+        "persistence": {
+          "mae": 42.59348155963676,
+          "ci95": [
+            39.64578039269962,
+            45.59247974269465
+          ]
+        },
+        "summary": {
+          "mae": 37.660575616908595,
+          "ci95": [
+            34.652977117855905,
+            40.76731361226724
+          ]
+        },
+        "augmented": {
+          "mae": 37.36233573414896,
+          "ci95": [
+            34.41487318223722,
+            40.58899630054344
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": -0.2982398827596408,
+          "ci95": [
+            -0.8682490195821054,
+            0.33922928510150335
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -4.932905942728163,
+          "ci95": [
+            -6.297025407229344,
+            -3.474532611139335
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -5.231145825487804,
+          "ci95": [
+            -6.644153201045858,
+            -3.6918642546282374
+          ]
+        }
+      },
+      "90": {
+        "persistence": {
+          "mae": 54.710307619987276,
+          "ci95": [
+            50.36888301701658,
+            59.541688320826005
+          ]
+        },
+        "summary": {
+          "mae": 44.924015851411816,
+          "ci95": [
+            41.31505657060083,
+            49.49890421994833
+          ]
+        },
+        "augmented": {
+          "mae": 44.561193740184954,
+          "ci95": [
+            40.72101983474764,
+            49.45784444484779
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": -0.36282211122685615,
+          "ci95": [
+            -0.7669045071068475,
+            0.12993444800638493
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -9.786291768575461,
+          "ci95": [
+            -11.18922645253233,
+            -7.939639514220366
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -10.14911387980232,
+          "ci95": [
+            -11.687541941682499,
+            -8.09039651188469
+          ]
+        }
+      },
+      "120": {
+        "persistence": {
+          "mae": 60.83208749053675,
+          "ci95": [
+            55.20333811470556,
+            67.60148007695936
+          ]
+        },
+        "summary": {
+          "mae": 47.51328557474685,
+          "ci95": [
+            43.68597838702144,
+            53.572402074304144
+          ]
+        },
+        "augmented": {
+          "mae": 47.40689243510675,
+          "ci95": [
+            43.39774533426053,
+            53.710833908123284
+          ]
+        },
+        "augmented-summary": {
+          "delta_mae": -0.10639313964010513,
+          "ci95": [
+            -0.646739482061948,
+            0.439320042009418
+          ]
+        },
+        "summary-persistence": {
+          "delta_mae": -13.3188019157899,
+          "ci95": [
+            -15.715611491798896,
+            -10.67381039694909
+          ]
+        },
+        "augmented-persistence": {
+          "delta_mae": -13.425195055430006,
+          "ci95": [
+            -15.830458192489152,
+            -10.947876467456954
+          ]
+        }
+      }
+    }
+  }
+}

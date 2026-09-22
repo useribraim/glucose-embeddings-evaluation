@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite the paper and identify the exact community checkpoint when using these results."
+title: "What Does a Glucose Foundation Model Understand About Me? A Single-Person Test of Frozen OpenCGM-StateEvent Embeddings"
+type: software
+authors:
+  - family-names: Abduramanov
+    given-names: Ibraim
+version: 1.0.0
+date-released: 2026-09-22
+repository-code: "https://github.com/useribraim/glucose-embeddings-evaluation"
+abstract: "A completed retrospective single-person comparison of glucose-summary Ridge and the same summaries plus frozen community encoder features. Public CPU inference and contract tests use synthetic data; the personal results are provided as aggregates."

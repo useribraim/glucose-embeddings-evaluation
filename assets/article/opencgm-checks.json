@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "verification_code_sha256": "1e9a8d5dcd9437178b5d9f815ee94037ac286fa28714a29c63578301781bcd1e",
+  "results_sha256": "6c99247d9c0ed3a4444b05c102909dacfedf55776ea34f150db9d8e66ac16339",
+  "test_code_sha256": "6dd3a8bcc6e1bc35d1bec09e69c8055e0ead0e159db3037e95fb0b50de602784",
+  "checks": [
+    "all 15 CSV hashes match pre-assignment inventory",
+    "protocol, code, model and window hashes match",
+    "GitHub source-checkout ONNX is byte-identical to Hugging Face download",
+    "all saved windows exclude all clock-ambiguity days",
+    "64 stratified private histories match pinned upstream grid exactly",
+    "256 private target values match independent observed-bin means",
+    "saved prediction identities, targets and persistence match input windows",
+    "all reported MAEs, paired differences and 95% intervals match explicit-row week bootstrap",
+    "root private-data ignore rule present"
+  ],
+  "unused_boundary_windows": 24
+}

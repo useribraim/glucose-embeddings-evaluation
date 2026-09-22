@@ -1,0 +1,5 @@
+# Measured environment: CPython 3.14.3, macOS arm64. CPU inference only.
+numpy==2.5.3
+pandas==3.0.6
+onnx==1.23.0
+onnxruntime==1.30.0

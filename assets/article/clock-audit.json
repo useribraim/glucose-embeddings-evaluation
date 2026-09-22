@@ -1,0 +1,112 @@
+{
+  "status": "measured; physical ordering unresolved; full-day exclusions selected before windows",
+  "files": [
+    {
+      "block": 1,
+      "sha256": "ce2809ac5f32c42d9543abf6070b457945581efe54b43b2f0a5988f39563df65",
+      "bytes": 1651396
+    },
+    {
+      "block": 2,
+      "sha256": "07da8e802e7f4c070e8b844a790c4f12a8f05cd697810068dcc2d97b893593f7",
+      "bytes": 2783911
+    },
+    {
+      "block": 3,
+      "sha256": "3256a9f3ca5f386a7d1463d69cf20290907cdada0e712fdc6850870dba003d73",
+      "bytes": 2789173
+    },
+    {
+      "block": 4,
+      "sha256": "5db1859900b825deea674a4baeb29e2da7f259c49eec5a61ce797b3a5d176d49",
+      "bytes": 2750721
+    },
+    {
+      "block": 5,
+      "sha256": "e5c3380f6a4eea94bc6ac367927046ac447eceb90a9f21c5b386fec85e39ea18",
+      "bytes": 2708041
+    },
+    {
+      "block": 6,
+      "sha256": "fb0f3401d962ae61e59b47289a586806fa5f055dd686600bd2fda8338c296e40",
+      "bytes": 2765673
+    },
+    {
+      "block": 7,
+      "sha256": "222746363b4763130c0af739940a594e876b4bd3f909cd20e6e947ce73a14c74",
+      "bytes": 279377
+    },
+    {
+      "block": 8,
+      "sha256": "7eef75fa1dec756823902f0fcd0a5fe72fd3f134e89c4e661528691d324a7b4e",
+      "bytes": 2837851
+    },
+    {
+      "block": 9,
+      "sha256": "0b72d669965f6458278df4740db704dccd6f14baffb1b428d3e356e3547c3743",
+      "bytes": 2843162
+    },
+    {
+      "block": 10,
+      "sha256": "5d37120a09f1d958a16a9ac757c6d9a9bfca5afe77541fcc05041a67eb4a32bc",
+      "bytes": 2808896
+    },
+    {
+      "block": 11,
+      "sha256": "1e4a54ff0ac94d934bdbab1fb471aab6fff725599867384319415c6368c6682e",
+      "bytes": 2769950
+    },
+    {
+      "block": 12,
+      "sha256": "d50af7494537a96bc1599c2955288341682994f4e1686efaf76517fa40b5f08b",
+      "bytes": 2806635
+    },
+    {
+      "block": 13,
+      "sha256": "ade5afc64cf2b3483506eff94e9f6b41ba5bb7166ab4fac947f0ef4f9a2595cf",
+      "bytes": 2843072
+    },
+    {
+      "block": 14,
+      "sha256": "8cdad4bdfb8cf7fd4ae0f59dcefc44e8b1a1ffea26892d174c785ef5ee46ef7a",
+      "bytes": 2892346
+    },
+    {
+      "block": 15,
+      "sha256": "2fda7cca0bbeeeaee7fd3a754c06e543222910462ef3944a01793264f09680bb",
+      "bytes": 2884243
+    }
+  ],
+  "unique_sensor_timestamps": 338084,
+  "repeated_sensor_rows": 24,
+  "conflicting_timestamps": 24,
+  "conflict_days": 2,
+  "clock_change_rows": 17,
+  "clock_row_populated_fields": [
+    "Date",
+    "Index",
+    "New Device Time",
+    "Time"
+  ],
+  "clock_new_minus_row_seconds": {
+    "-10740": 2,
+    "-3660": 1,
+    "-3600": 2,
+    "-3599": 1,
+    "0": 3,
+    "1": 1,
+    "59": 1,
+    "3300": 1,
+    "3540": 1,
+    "3600": 1,
+    "3601": 1,
+    "10801": 2
+  },
+  "conflicts_bracketing_clock_row_by_export_index": 0,
+  "conflict_days_with_clock_rows": 2,
+  "excluded_calendar_days": 17,
+  "sensor_timestamps_on_excluded_days": 4566,
+  "rule": "Reject any full history-to-last-target interval intersecting any conflict day or any calendar day between a clock row's old and new date inclusive. No UTC or DST reconstruction. Equal SG duplicates collapse only after the audit; conflicting days are never averaged. All original records preserved.",
+  "missing_ordering_evidence": "No timezone/UTC offset, monotone device event time, or documented relation of export Index and New Device Time to physical SG acquisition order. Index brackets alone do not supply that contract.",
+  "code_sha256": "e41145eb8352b830daf3a1afcbce3cfea0c9996def1fb417ca2acdb1135e8ecf"
+}

@@ -1,0 +1,68 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=0.9in,headheight=14pt,headsep=18pt]{geometry}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\else
+  \usepackage{fontspec}
+  \setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,
+    ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+  \setmonofont{lmmono10-regular.otf}[Scale=0.88]
+\fi
+\usepackage{microtype}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{longtable,booktabs,array,calc}
+% Pandoc 3.11 uses LTcaptype=none for uncaptioned tables. Older TeX bundles
+% still advance that counter; define it without affecting numbered captions.
+\newcounter{none}
+\usepackage{etoolbox}
+\usepackage{caption}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\definecolor{linkink}{HTML}{245B78}
+\usepackage{xurl}
+\usepackage[colorlinks=true,allcolors=linkink,breaklinks=true]{hyperref}
+\hypersetup{pdftitle={$title$},pdfauthor={$author$},pdfsubject={$subtitle$}}
+\urlstyle{same}
+\setlength{\emergencystretch}{2em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.2em}
+\setlength{\LTpre}{0.4em}
+\setlength{\LTpost}{0.7em}
+\AtBeginEnvironment{longtable}{\small\renewcommand{\arraystretch}{1.12}}
+\captionsetup{font=small,labelfont=bf,justification=justified,singlelinecheck=false}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{1.2em}{0.45em}
+\titlespacing*{\subsection}{0pt}{0.9em}{0.3em}
+\setcounter{secnumdepth}{-1}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\footnotesize Frozen OpenCGM embeddings for personal glucose forecasting}
+\fancyhead[R]{\footnotesize Working preprint}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\begin{document}
+\thispagestyle{plain}
+\begin{center}
+{\LARGE\bfseries $title$\par}
+\vspace{0.65em}
+{\large $subtitle$\par}
+\vspace{1em}
+{\normalsize $author$\par}
+\vspace{0.35em}
+{\small Working preprint --- $date$\par}
+\end{center}
+\vspace{0.45em}
+\begin{abstract}
+\noindent $abstract$
+\end{abstract}
+\vspace{0.4em}
+$body$
+\end{document}

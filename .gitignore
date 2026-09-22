@@ -1,0 +1,8 @@
+.venv/
+.cache/
+.demo-output/
+__pycache__/
+*.pyc
+private-data/
+paper/build/
+.DS_Store

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "pdf_sha256": "0e3c02d5d27ed9394f87f9fdf9b99715c1efea74a106fd96bbfc60c767eef825",
+  "pages": 8,
+  "visual_review": "All eight rendered pages inspected: title, equations, tables, figure, references and appendices are readable; no clipping observed.",
+  "checks": [
+    "all text bounding boxes within page margins",
+    "no overfull boxes or missing glyphs in final TeX log",
+    "primary results and appendix present in extracted text",
+    "all generated-file hashes match build manifest",
+    "source archive contains only main.tex and aggregate vector figure",
+    "extracted source archive compiles independently with identical extracted text"
+  ],
+  "typesetting_note": "One non-fatal underfull paragraph warning in the evidence-map text; no clipping.",
+  "command": "carelink-local/.venv/bin/python paper/build_paper.py"
+}

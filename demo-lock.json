@@ -1,0 +1,127 @@
+{
+  "model": "OpenCGM-StateEvent community reconstruction; not Google's GlucoFM",
+  "hf_revision": "6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3",
+  "source_revision": "bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf",
+  "files": [
+    {
+      "path": "model/README.md",
+      "url": "https://huggingface.co/sfourdrinier/opencgm-stateevent/resolve/6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3/README.md",
+      "sha256": "b3e27cba429eb5e0757b6d52b407c5ee9c4ce0863574b66f59017331b10036a7",
+      "bytes": 9362
+    },
+    {
+      "path": "model/glucofm_encoder.onnx.meta.json",
+      "url": "https://huggingface.co/sfourdrinier/opencgm-stateevent/resolve/6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3/glucofm_encoder.onnx.meta.json",
+      "sha256": "a84d1870d526ff06a4a5a6fdd403e44b93db2c545e584138b6de0b23fcfe7773",
+      "bytes": 818
+    },
+    {
+      "path": "model/glucofm_encoder.onnx",
+      "url": "https://huggingface.co/sfourdrinier/opencgm-stateevent/resolve/6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3/glucofm_encoder.onnx",
+      "sha256": "b1349deffd15ab62a5a98d7c7c4a7e143bcf1dee7ad745b1e05533ff54f34768",
+      "bytes": 1991782
+    },
+    {
+      "path": "model/LICENSE-WEIGHTS",
+      "url": "https://huggingface.co/sfourdrinier/opencgm-stateevent/resolve/6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3/LICENSE-WEIGHTS",
+      "sha256": "fa624357cc1f659f78201af840676fac110299214da703c9be1c03a6598f986f",
+      "bytes": 1340
+    },
+    {
+      "path": "model/NOTICE",
+      "url": "https://huggingface.co/sfourdrinier/opencgm-stateevent/resolve/6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3/NOTICE",
+      "sha256": "74f9d11ebd76ca08205607b6ce1de351911cf87d49898ed882c03f4f992884d1",
+      "bytes": 2246
+    },
+    {
+      "path": "model/CITATION.cff",
+      "url": "https://huggingface.co/sfourdrinier/opencgm-stateevent/resolve/6c53e572c2dafcb0b030f2e1aa4f3a2a8d7f7ca3/CITATION.cff",
+      "sha256": "d84aadb77c79a2c016816ee5fc930904a0d18b751ada29e0ec699a327b7f4405",
+      "bytes": 1009
+    },
+    {
+      "path": "source/scripts/export_encoder_onnx.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/scripts/export_encoder_onnx.py",
+      "sha256": "1299ca1d13645a8c81c6db47c1b97b90f759530ebc762ac53ede288752fd799c",
+      "bytes": 19062
+    },
+    {
+      "path": "source/src/opencgm_stateevent/model/encoder.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/model/encoder.py",
+      "sha256": "adfe2113b7593369981e58fa2f0a94e9c871414270888998bc3aeadefa1249e7",
+      "bytes": 9911
+    },
+    {
+      "path": "source/src/opencgm_stateevent/model/causal_gaussian.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/model/causal_gaussian.py",
+      "sha256": "8692c2e706aa10a2e944231ace7e28c5e499443ec2dbd35e5b8213e8182aebc7",
+      "bytes": 3945
+    },
+    {
+      "path": "source/src/opencgm_stateevent/model/reference.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/model/reference.py",
+      "sha256": "94ad68f707f1f658ecca6a9944d0d2f5a3fd0beb3b557170830e07edd8f22ff2",
+      "bytes": 6615
+    },
+    {
+      "path": "source/src/opencgm_stateevent/model/statistics.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/model/statistics.py",
+      "sha256": "15b9364cb59d64108f94e62ec8d7d421b93f538510dabbd46de0f8926990c888",
+      "bytes": 5294
+    },
+    {
+      "path": "source/src/opencgm_stateevent/model/stream_embedder.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/model/stream_embedder.py",
+      "sha256": "627842e9013adcbc0d927e9294e05ae312f53834814804d7785a83e9581443d6",
+      "bytes": 7815
+    },
+    {
+      "path": "source/src/opencgm_stateevent/data/grid.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/data/grid.py",
+      "sha256": "76e8d1dd9f2437e8d215f890f594a62cd17afca9603016bb8b057c37666da06b",
+      "bytes": 5106
+    },
+    {
+      "path": "source/src/opencgm_stateevent/data/timestamps.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/data/timestamps.py",
+      "sha256": "7683509601ac2ec509c72e0e56ca652a03e7d85e554eccff50fd4632e0b29e4c",
+      "bytes": 6143
+    },
+    {
+      "path": "source/src/opencgm_stateevent/eval/ppgr.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/eval/ppgr.py",
+      "sha256": "001eb81ee5d9dd4692a8ed58f92f837cc579f3ac6f73113029abe6788df8eb5d",
+      "bytes": 14851
+    },
+    {
+      "path": "source/manifests/sources/registry.yaml",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/manifests/sources/registry.yaml",
+      "sha256": "a05c47a24d201676a4b0fc453fac48adcd1df0ee5d2c9c6c002f5e6e31125b4d",
+      "bytes": 7530
+    },
+    {
+      "path": "source/src/opencgm_stateevent/__init__.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/__init__.py",
+      "sha256": "9a39a057fff9cee6bdece879a4c7b1373313007f69f4cd6e9f2292d2bbb2ac7d",
+      "bytes": 191
+    },
+    {
+      "path": "source/src/opencgm_stateevent/data/__init__.py",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/src/opencgm_stateevent/data/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "source/LICENSE",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "bytes": 11358
+    },
+    {
+      "path": "source/web/public/models/encoder.onnx",
+      "url": "https://raw.githubusercontent.com/sfourdrinier/opencgm/bcf8ac2dfca00f8fb3c7728fb2a3a2bd2803bebf/web/public/models/encoder.onnx",
+      "sha256": "b1349deffd15ab62a5a98d7c7c4a7e143bcf1dee7ad745b1e05533ff54f34768",
+      "bytes": 1991782
+    }
+  ]
+}

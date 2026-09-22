@@ -1,0 +1,127 @@
+{
+  "status": "private inference passed; no forecast comparison scored at build time",
+  "protocol_sha256": "3cc2fd06755d644bdc1a44efdb83d17c62922472b4a06ad8183569a2f69853bb",
+  "encoder_sha256": "b1349deffd15ab62a5a98d7c7c4a7e143bcf1dee7ad745b1e05533ff54f34768",
+  "input_files": [
+    {
+      "block": 1,
+      "sha256": "ce2809ac5f32c42d9543abf6070b457945581efe54b43b2f0a5988f39563df65",
+      "bytes": 1651396
+    },
+    {
+      "block": 2,
+      "sha256": "07da8e802e7f4c070e8b844a790c4f12a8f05cd697810068dcc2d97b893593f7",
+      "bytes": 2783911
+    },
+    {
+      "block": 3,
+      "sha256": "3256a9f3ca5f386a7d1463d69cf20290907cdada0e712fdc6850870dba003d73",
+      "bytes": 2789173
+    },
+    {
+      "block": 4,
+      "sha256": "5db1859900b825deea674a4baeb29e2da7f259c49eec5a61ce797b3a5d176d49",
+      "bytes": 2750721
+    },
+    {
+      "block": 5,
+      "sha256": "e5c3380f6a4eea94bc6ac367927046ac447eceb90a9f21c5b386fec85e39ea18",
+      "bytes": 2708041
+    },
+    {
+      "block": 6,
+      "sha256": "fb0f3401d962ae61e59b47289a586806fa5f055dd686600bd2fda8338c296e40",
+      "bytes": 2765673
+    },
+    {
+      "block": 7,
+      "sha256": "222746363b4763130c0af739940a594e876b4bd3f909cd20e6e947ce73a14c74",
+      "bytes": 279377
+    },
+    {
+      "block": 8,
+      "sha256": "7eef75fa1dec756823902f0fcd0a5fe72fd3f134e89c4e661528691d324a7b4e",
+      "bytes": 2837851
+    },
+    {
+      "block": 9,
+      "sha256": "0b72d669965f6458278df4740db704dccd6f14baffb1b428d3e356e3547c3743",
+      "bytes": 2843162
+    },
+    {
+      "block": 10,
+      "sha256": "5d37120a09f1d958a16a9ac757c6d9a9bfca5afe77541fcc05041a67eb4a32bc",
+      "bytes": 2808896
+    },
+    {
+      "block": 11,
+      "sha256": "1e4a54ff0ac94d934bdbab1fb471aab6fff725599867384319415c6368c6682e",
+      "bytes": 2769950
+    },
+    {
+      "block": 12,
+      "sha256": "d50af7494537a96bc1599c2955288341682994f4e1686efaf76517fa40b5f08b",
+      "bytes": 2806635
+    },
+    {
+      "block": 13,
+      "sha256": "ade5afc64cf2b3483506eff94e9f6b41ba5bb7166ab4fac947f0ef4f9a2595cf",
+      "bytes": 2843072
+    },
+    {
+      "block": 14,
+      "sha256": "8cdad4bdfb8cf7fd4ae0f59dcefc44e8b1a1ffea26892d174c785ef5ee46ef7a",
+      "bytes": 2892346
+    },
+    {
+      "block": 15,
+      "sha256": "2fda7cca0bbeeeaee7fd3a754c06e543222910462ef3944a01793264f09680bb",
+      "bytes": 2884243
+    }
+  ],
+  "code_sha256": {
+    "archive_inventory.py": "35380f84b14279969a78e06efd55c5dea056c2ec94e76e8fba5edd8e994f1522",
+    "clock_audit.py": "e41145eb8352b830daf3a1afcbce3cfea0c9996def1fb417ca2acdb1135e8ecf",
+    "prepare_opencgm.py": "23370d504e62b102ddfbb7f28382dbe696cafde9047240f7915ffb4553d011da",
+    "context_comparison.py": "f6eed7608d62490373e6edd181c6254756146ebce175aa4d943d25b618010b8d",
+    "opencgm_comparison.py": "b324750df0f2a6ba97ac096f26cc7abe2449da8d651c56498778d512b80421a6"
+  },
+  "private_windows_sha256": "00ebdbb8e76434b00160e5748fa07dd3a0578bba7e6616e5e7c19f64095f715c",
+  "environment": {
+    "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "platform": "macOS-15.7.9-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "onnx": "1.23.0",
+      "onnxruntime": "1.30.0"
+    }
+  },
+  "counts": {
+    "candidate_issue_times": 14754,
+    "archive_boundary": 14,
+    "missing_target_bins": 255,
+    "history_gap_over_60min": 2939,
+    "history_coverage_or_last_bin": 103,
+    "clock_support_overlap": 399,
+    "eligible_windows": 11044
+  },
+  "split_counts": {
+    "development_train": 5334,
+    "validation": 3357,
+    "final_train": 8704,
+    "exploratory": 1662,
+    "later": 654
+  },
+  "excluded_clock_days": 17,
+  "checks": [
+    "all input file hashes unchanged during read",
+    "conflicts excluded before binning",
+    "unique increasing local issue identities",
+    "finite summaries/targets/embeddings",
+    "CPU-only inference",
+    "private training-window batch invariance"
+  ],
+  "embedding_dimensions": 128,
+  "minimum_history_observed_bins": 270
+}

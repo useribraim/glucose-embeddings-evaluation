@@ -1,0 +1,30 @@
+{
+  "status": "passed on synthetic input before private inference",
+  "encoder_sha256": "b1349deffd15ab62a5a98d7c7c4a7e143bcf1dee7ad745b1e05533ff54f34768",
+  "protocol_sha256": "3cc2fd06755d644bdc1a44efdb83d17c62922472b4a06ad8183569a2f69853bb",
+  "code_sha256": "b324750df0f2a6ba97ac096f26cc7abe2449da8d651c56498778d512b80421a6",
+  "environment": {
+    "python": "3.14.3 (main, Feb  3 2026, 15:32:20) [Clang 16.0.0 (clang-1600.0.26.6)]",
+    "platform": "macOS-15.7.9-arm64-arm-64bit-Mach-O",
+    "packages": {
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "onnx": "1.23.0",
+      "onnxruntime": "1.30.0"
+    }
+  },
+  "providers": [
+    "CPUExecutionProvider"
+  ],
+  "checks": [
+    "ONNX full graph check",
+    "exact input/output contract",
+    "constant/ramp/sinusoid/empty/sparse finite",
+    "repeat deterministic",
+    "batch-size invariance",
+    "masked finite-fill invariance",
+    "observed-input sensitivity"
+  ],
+  "batch_max_abs_difference": 0.0,
+  "masked_fill_max_abs_difference": 0.0
+}
